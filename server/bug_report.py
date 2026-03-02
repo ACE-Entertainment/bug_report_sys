@@ -24,6 +24,8 @@ webhook_url = ''
 app = Flask(__name__)
 UPLOAD_FOLDER = '.'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+MIGRATION_URL = 'https://github.com/ACE-Entertainment/feishu-bug-gateway'
+
 
 # 数据库配置
 DB_HOST = os.getenv('DB_HOST')
@@ -65,6 +67,12 @@ def compress_image(image_path):
 
 @app.route('/', methods=['POST'])
 def upload_data():
+    return jsonify({
+        "status": "deprecated",
+        "message": "This API has been sunset. Please migrate to the new repository.",
+        "migration": MIGRATION_URL
+    }), 410
+
     try:
         # 接收 Bug 标题
         bug_title = request.form.get('bug_title')
