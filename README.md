@@ -1,5 +1,14 @@
+# ⚠️ 仓库已停止维护（Deprecated）
 
-# Bug Report API
+这个仓库已经结束维护，不再接收更新。
+
+请迁移到新仓库：
+
+👉 https://github.com/ACE-Entertainment/feishu-bug-gateway
+
+---
+
+## 历史说明（仅供参考）
 
 这是一个基于 Flask 的 API，用于处理用户提交的 Bug 报告。接受日志、图片及其他元数据，存储到 MySQL 数据库
 
